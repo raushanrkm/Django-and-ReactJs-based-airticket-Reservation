@@ -1,0 +1,30 @@
+1. I used Dajngo Rest service in Backend. it run at port 8000  .........\Backend_Django\ReservationApp>python manage.py runserver)
+
+2. rest service work very well in Postman RestClient but i faced Problem CSRF in react for post request
+.
+3.Admin user name: raushanrkm  Admin password:  rkm5481rkm5481
+
+4. I set virtual enviroment for Django In \Backend_Django Folder
+
+5. I add Get and Post Request (/addnewreservation/)->>>post request
+/reservationlist/{searhkey}->>>>> get request.
+
+
+
+
+6. React is running in port 3000
+
+command to run =>npm start first go to root file name (.....\ReactFrontEnd\reservation\ npm  strart)
+
+7.I used Bootstrap in Project. 
+
+8. i used webpack to bundle
+
+
+
+
+
+
+
+
+
