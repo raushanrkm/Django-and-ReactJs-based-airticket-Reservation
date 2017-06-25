@@ -3,7 +3,7 @@
 
 Please open Browser in Developer mode. 
 
-try url request from broweser Directly {(http://localhost:8000/reservationlist/{search_text(option not required)} , GET REquest), (http://localhost:8000/addnewreservation/)
+try url request from broweser Directly {(http://localhost:8000/reservationlist/{search_text(it is option not required)} , GET REquest), (http://localhost:8000/addnewreservation/)
 
 try request from Postman Rest Client*********/
 
