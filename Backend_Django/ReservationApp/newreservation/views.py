@@ -9,6 +9,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
+#from django.core.context_processors import csrf
+
 
 class ReservationList(APIView):
   def get(self, request, searchkey):
@@ -25,6 +27,8 @@ class ReservationList(APIView):
 @method_decorator(csrf_exempt, name='dispatch')
 class AddNewReservation(APIView):
      def post(self, request, format=None):
+       # c = {}
+       # c.update(csrf(request))
      	
         serializer = ReservationDbSerializer(data=request.data)
         print"hello"
