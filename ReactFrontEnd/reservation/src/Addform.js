@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+//import DjangoCSRFToken from 'django-react-csrftoken';
+
 
 class MyForm extends Component {
   constructor(props) {
@@ -8,6 +10,7 @@ class MyForm extends Component {
       Date: '',
       Time: '',
       Description: ''
+      //djangoCSRFToken: DjangoCSRFToken.csrfToken
     };
 
     this.handleInputChangeDate = this.handleInputChangeDate.bind(this);
@@ -38,7 +41,7 @@ handleSubmit(event)
 
 
 
-
+//var csrftoken= this.state.djangoCSRFToken;
 axios.post('http://localhost:8000/addnewreservation/', data);
      
   
@@ -48,7 +51,7 @@ axios.post('http://localhost:8000/addnewreservation/', data);
     //        headers: {
     //                   'Accept': 'application/json',
     //                    'Content-Type': 'application/json',
-
+    //                    'X-CSRFToken' : 'csrftoken',
     //                  },
     //        body:JSON.stringify(data)
     //   });
@@ -62,6 +65,8 @@ this.props.handleSubmit(event);
  
    <div>
       <form onSubmit={this.handleSubmit} >
+      {/*<DjangoCSRFToken />
+       <input type="hidden" value="12345" name="antiCSRF"></input>*/}
       <label>  Date:<input  name="Date"  type="date"  value={this.state.Date}  onChange={this.handleInputChangeDate} /> </label>
        <label> Time: <input name="Time" type="time" value={this.state.Time} onChange={this.handleInputChangeTime}  /> </label>
       <label> Description: <input name="Description" type="texts"  onChange={this.handleInputChangeDescr}  /> </label>
