@@ -24,7 +24,7 @@ command to run =>npm start first go to root file name (.....\ReactFrontEnd\reser
 
 4. I used Dajngo Rest service in Backend. it run at port 8000  .........\Backend_Django\ReservationApp>python manage.py runserver)
 
-5. rest service work very well in Postman RestClient but i faced Problem CSRF in react for post request
+5. Django 1.9
 .
 6.Admin user name: raushanrkm  Admin password:  rkm5481rkm5481
 
