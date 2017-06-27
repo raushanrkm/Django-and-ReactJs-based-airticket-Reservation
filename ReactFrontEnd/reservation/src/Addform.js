@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 //import DjangoCSRFToken from 'django-react-csrftoken';
+//import ReactDOM, { findDOMNode } from 'react-dom';
+//import DjangoCSRFToken from 'django-react-csrftoken';
+import {  Form, FormGroup, Label, Input,Col } from 'reactstrap';
 
 
 class MyForm extends Component {
@@ -63,19 +66,49 @@ this.props.handleSubmit(event);
     return (
       
  
-   <div>
-      <form onSubmit={this.handleSubmit} >
-      {/*<DjangoCSRFToken />
-       <input type="hidden" value="12345" name="antiCSRF"></input>*/}
-      <label>  Date:<input  name="Date"  type="date"  value={this.state.Date}  onChange={this.handleInputChangeDate} /> </label>
-       <label> Time: <input name="Time" type="time" value={this.state.Time} onChange={this.handleInputChangeTime}  /> </label>
-      <label> Description: <input name="Description" type="texts"  onChange={this.handleInputChangeDescr}  /> </label>
-      <br/>
-      <br/>
-      <button type="submit" >SAVE</button>
+   
+  <div> 
+      
+        <Form style={{backgroundColor :" gray"}} onSubmit={this.handleSubmit} ref='form'>
 
-      </form>
-  </div>
+        <FormGroup row>
+          {/*<DjangoCSRFToken />
+       <input type="hidden" value="12345" name="antiCSRF"></input>
+         </FormGroup>*/}
+
+
+        <FormGroup row>
+          <Label for="Date" sm={1}>Date</Label>
+          <Col sm={5}>
+          <Input type="Date" ref="Date" name="Date" onChange={this.handleInputChangeDate} />
+          </Col>
+        </FormGroup>
+        <FormGroup row>
+          <Label for="examplePassword" sm={1} onChange={this.handleInputChangeTime}>Time</Label>
+        <Col sm={5}>
+           <Input type="Time" ref="Time" name="Time" />
+        </Col>
+        </FormGroup>
+
+        <FormGroup row>
+          <Label for="Description" sm={1}>Description</Label>
+        <Col sm={5}>
+          <Input type="text" ref="Description" name="Description" placeholder=" Write Description"  onChange={this.handleInputChangeDescr}/>
+        </Col>
+        </FormGroup>
+
+        <FormGroup row>
+        <Col sm={{ size: 2, offset: 2 }} >
+         <Input type="submit" name="Save" id="Description" value="Save" style={{backgroundColor: "green", color:"white"}} />
+        </Col>
+        </FormGroup>
+
+        <Col sm={5}/>
+
+       </Form>
+      
+      
+ </div>
 
     
     );
